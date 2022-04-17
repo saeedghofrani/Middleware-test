@@ -1,7 +1,8 @@
 const logParam = (request, response, _next) => {
 
-    return response.json({ path: request.originalUrl, success: true, result: req.body });
-    
+    console.log(request.body); 
+    return response.json({ path: request.originalUrl, success: true, result: request.body });
+
 };
 
 module.exports = {
